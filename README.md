@@ -158,4 +158,45 @@ font_size: 14px
 ```
 
 **Options:**
-- `min`, `max`, `step`: 
+- `min`, `max`, `step`:
+
+---
+
+### 7. Temperature Slider Card
+**Purpose:** Adjust thermostat temperature.
+
+```yaml
+type: custom:temperature-room-slider
+entity: climate.thermostat
+min: 15
+max: 30
+font_size: 14px
+icon: mdi:thermometer
+line_color: "#ad1d1d"
+line_width: 2px
+```
+
+- **Options:**
+  - `entity`: Thermostat entity.
+  - `min`, `max`: Temperature range.
+  - `font_size`, `icon`, `line_color`, `line_width`: Styling options.
+
+---
+
+### 8. Welcome Entrance Card
+**Purpose:** Display weather and welcome information (e.g., with the AccuWeather integration).
+
+```yaml
+type: custom:weather-info-card
+weather: weather.your_location
+background_color: "#ffffff"
+font_size: 14px
+padding: 20px
+height: 80px
+```
+
+- **Options:**
+  - `weather`: Weather entity.
+  - `background_color`, `font_size`, `padding`, `height`: Styling options.
+
+---
