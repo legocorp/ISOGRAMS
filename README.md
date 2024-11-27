@@ -27,7 +27,7 @@ Two themes accompany the dashboard:
   ![ISOGRAMS Light Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-light.png?raw=true)
 
 - **ISOGRAMS - Dark**
-  ![ISOGRAMS Dark Theme](path_to_dark_theme_screenshot.png)
+  ![ISOGRAMS Dark Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-dark.png?raw=true)
 
 *Screenshots are placeholders; please replace `path_to_light_theme_screenshot.png` and `path_to_dark_theme_screenshot.png` with actual image paths.*
 
