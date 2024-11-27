@@ -18,10 +18,10 @@ The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, u
 ## Screenshots
 
 ### ISOGRAMS Light Theme
-![ISOGRAMS Light Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-light.png)
+![ISOGRAMS Light Theme](/blob/main/img/ISOGRAMS-light.png)
 
 ### ISOGRAMS Dark Theme
- ![ISOGRAMS Dark Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-dark.png)
+ ![ISOGRAMS Dark Theme](blob/main/img/ISOGRAMS-dark.png)
 
 ---
 
@@ -60,6 +60,7 @@ The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, u
 
 ## Custom Cards
 
+![1. Light Control Button](/blob/main/img/1_Light_Control_Button.png)
 ### 1. Light Control Button
 **Purpose:** Quickly toggle a light entity on/off. On hold, access settings.
 
