@@ -160,7 +160,6 @@ font_size: 14px
 **Options:**
 - `min`, `max`, `step`:
 
----
 
 ### 7. Temperature Slider Card
 **Purpose:** Adjust thermostat temperature.
@@ -181,7 +180,6 @@ line_width: 2px
   - `min`, `max`: Temperature range.
   - `font_size`, `icon`, `line_color`, `line_width`: Styling options.
 
----
 
 ### 8. Welcome Entrance Card
 **Purpose:** Display weather and welcome information (e.g., with the AccuWeather integration).
