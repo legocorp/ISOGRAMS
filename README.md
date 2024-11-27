@@ -23,45 +23,12 @@ The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, u
 ### ISOGRAMS Dark Theme
  ![ISOGRAMS Dark Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-dark.png)
 
----
-
-## Getting Started
-
-### Prerequisites
-
-- Home Assistant instance with Lovelace UI enabled.
-- A tablet or device for displaying the dashboard (e.g., Lenovo Tab M8).
-- Kiosk Browser app (optional, but recommended).
-
-### Installation
-
-1. **Download the Resources**
-   - [Themes Download Link](https://drive.google.com/file/d/1dh0HdyBXuOj-73ZxMOSCvV20O7jga5FV/view?usp=sharing)
-   - [Dashboard Components Download Link](https://drive.google.com/file/d/1urRT_o5r08OM4GZxQeFJt32_TAnD8Q1l/view?usp=sharing)
-
-2. **Add Resources to Home Assistant**
-   Include the JavaScript files in your Lovelace resources:
-   ```yaml
-   resources:
-     - url: /local/path-to/light-control-button.js
-       type: module
-     - url: /local/path-to/lights-slider-card.js
-       type: module
-     # Add remaining resources...
-   ```
-
-3. **Apply Themes**
-   Import the themes into your Home Assistant configuration.
-
-4. **Configure Lovelace**
-   Use the card configurations provided below to set up your dashboard.
-
----
 
 ## Custom Cards
 
 ### 1. Light Control Button
 ![1. Light Control Button](https://github.com/legocorp/ISOGRAMS/blob/main/img/1_Light_Control_Button.png)
+
 **Purpose:** Quickly toggle a light entity on/off. On hold, access settings.
 
 ```yaml
@@ -78,10 +45,11 @@ name: "Living Room Light"
   - `font_size`: Font size of the text (default: `20px`).
   - `name`: Custom label (default: friendly name).
 
----
+
 
 ### 2. Lights Slider Card
 ![2. Lights Slider Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/2_Lights_Slider_Card.png)
+
 **Purpose:** Adjust brightness for multiple lights.
 
 ```yaml
@@ -102,10 +70,11 @@ icon: mdi:lightbulb
   - `font_size`, `line_color`, `line_width`: Styling options.
   - `icon`: Icon to display.
 
----
+
 
 ### 3. Main Entrance Card
 ![3. Main Entrance Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/3_Main_Entrance_Card.png)
+
 **Purpose:** Display temperature and humidity.
 
 ```yaml
@@ -122,7 +91,7 @@ height: 80px
   - `temperature`, `humidity`: Sensor entities.
   - `background_color`, `font_size`, `padding`, `height`: Styling options.
 
----
+
 
 ### 4. Rail Card
 ![4. Rail Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/4_Rail_Card.png)
@@ -142,7 +111,7 @@ update_interval: 60000
   - `icon`: Icon to display.
   - `update_interval`: Refresh interval in ms (default: `60000`).
 
----
+
 
 ### 5. Ruler Card (Degrees)
 ![5. Ruler Card (Degrees)](https://github.com/legocorp/ISOGRAMS/blob/main/img/5_Ruler_Card_Degrees.png)
@@ -160,10 +129,11 @@ font_size: 14px
   - `min`, `max`, `step`: Slider range and step values.
   - `font_size`: Font size.
 
----
+
 
 ### 6. Ruler Card (Percentage)
 ![6. Ruler Card (Percentage)](https://github.com/legocorp/ISOGRAMS/blob/main/img/6_Ruler_Card_Percentage.png)
+
 **Purpose:** Slider for percentage-based values.
 
 ```yaml
@@ -178,10 +148,11 @@ font_size: 14px
   - `min`, `max`, `step`: Percentage range and step.
   - `font_size`: Font size.
 
----
+
 
 ### 7. Temperature Slider Card
 ![7. Temperature Slider Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/7_Temperature_Slider_Card.png)
+
 **Purpose:** Adjust thermostat temperature.
 
 ```yaml
@@ -200,10 +171,11 @@ line_width: 2px
   - `min`, `max`: Temperature range.
   - `font_size`, `icon`, `line_color`, `line_width`: Styling options.
 
----
+
 
 ### 8. Welcome Entrance Card
 ![8. Welcome Entrance Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/8_Welcome_Entrance_Card.png)
+
 **Purpose:** Display weather and welcome information (e.g., with the AccuWeather integration).
 
 ```yaml
@@ -219,4 +191,3 @@ height: 80px
   - `weather`: Weather entity.
   - `background_color`, `font_size`, `padding`, `height`: Styling options.
 
----
