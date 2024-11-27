@@ -1,91 +1,118 @@
-# ISOGRAMS Dashboard for Home Assistant
+Certainly! Here's a structured `README.md` for your GitHub repository, based on your Home Assistant Community post:
 
-Welcome to **ISOGRAMS**, a custom Home Assistant dashboard designed to simplify and enhance your smart home interface.
+```markdown
+# ISOGRAMS - Custom Dashboard and Buttons
 
-## Introduction
+Welcome to ISOGRAMS, a custom dashboard interface for Home Assistant designed to be simple, intuitive, and free from information overload.
 
-I’ve been a Home Assistant enthusiast for a while, and after equipping my flat with tech, I decided to build a dashboard tailored to my needs. The idea behind this dashboard is simplicity: easy to understand, functional, and free of information overload.  
+## Overview
 
-The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, using the **Kiosk Browser** app for a seamless experience. While it works in portrait mode, the layout may occasionally appear misaligned.  
+After equipping my flat with smart technology, I developed this dashboard to streamline control and monitoring. It's optimized for landscape mode on a Lenovo Tab M8 with a dock station, utilizing the Kiosk app for continuous operation. While it functions in portrait mode, the layout may appear differently.
 
-### Features
-- **Custom Sidebar:** Based on a modified version of [DBuit’s Sidebar Card](https://github.com/DBuit/sidebar-card). *(Not included as I haven’t obtained permission to share the modifications.)*
-- **Two Themes:** A light and dark theme to complement the dashboard.
-- **Eight Custom Cards:** Fully configurable and designed for intuitive interaction.
+**Note:** The sidebar is a modified version of the [sidebar card by DBuit](https://github.com/DBuit/sidebar-card). Due to permission considerations, this modified sidebar isn't included in this repository.
 
----
+## Themes
 
-## Screenshots
+Two themes accompany the dashboard:
 
-### ISOGRAMS Light Theme
-*(Insert light theme image here)*
+- **ISOGRAMS - Light**
+  ![ISOGRAMS Light Theme](path_to_light_theme_screenshot.png)
 
-### ISOGRAMS Dark Theme
-*(Insert dark theme image here once available)*
+- **ISOGRAMS - Dark**
+  ![ISOGRAMS Dark Theme](path_to_dark_theme_screenshot.png)
 
----
+*Screenshots are placeholders; please replace `path_to_light_theme_screenshot.png` and `path_to_dark_theme_screenshot.png` with actual image paths.*
 
-## Getting Started
+## Components
 
-### Prerequisites
+The dashboard includes the following customizable components:
 
-- Home Assistant instance with Lovelace UI enabled.
-- A tablet or device for displaying the dashboard (e.g., Lenovo Tab M8).
-- Kiosk Browser app (optional, but recommended).
+1. **Light Control Button**
+2. **Lights Slider Card**
+3. **Main Entrance Card**
+4. **Rail Card**
+5. **Ruler Card (Degrees)**
+6. **Ruler Card (Percentage)**
+7. **Temperature Slider Card**
+8. **Welcome Entrance Card**
 
-### Installation
+Each component is fully configurable. Detailed integration instructions are provided below.
 
-1. **Download the Resources**
-   - [Themes Download Link](https://drive.google.com/file/d/1dh0HdyBXuOj-73ZxMOSCvV20O7jga5FV/view?usp=sharing)
-   - [Dashboard Components Download Link](https://drive.google.com/file/d/1urRT_o5r08OM4GZxQeFJt32_TAnD8Q1l/view?usp=sharing)
+## Installation
 
-2. **Add Resources to Home Assistant**
-   Include the JavaScript files in your Lovelace resources:
-   ```yaml
-   resources:
-     - url: /local/path-to/light-control-button.js
-       type: module
-     - url: /local/path-to/lights-slider-card.js
-       type: module
-     # Add remaining resources...
-Apply Themes Import the themes into your Home Assistant configuration.
+To set up the ISOGRAMS dashboard:
 
-Configure Lovelace Use the card configurations provided below to set up your dashboard.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/isograms-dashboard.git
+   ```
 
-Custom Cards
-1. Light Control Button
-Purpose: Quickly toggle a light entity on/off. On hold, access settings.
+2. **Navigate to the Directory:**
+   ```bash
+   cd isograms-dashboard
+   ```
 
+3. **Copy Files to Home Assistant:**
+   Transfer the relevant files to your Home Assistant configuration directory.
+
+4. **Configure Themes:**
+   Add the themes to your `themes.yaml` file and select them in your Home Assistant profile.
+
+5. **Integrate Components:**
+   Follow the configuration details below for each component.
+
+## Component Configurations
+
+### 1. Light Control Button
+
+**Purpose:** Quickly toggle a light entity on or off. Holding the button opens settings.
+
+**Configuration:**
+```yaml
 type: custom:light-control-button
 entity: light.your_light
 icon: mdi:lightbulb
 font_size: 20px
 name: "Living Room Light"
-Options:
-entity: Light entity ID.
-icon: Icon to display (default: mdi:lightbulb).
-font_size: Font size of the text (default: 20px).
-name: Custom label (default: friendly name).
-2. Lights Slider Card
-Purpose: Adjust brightness for multiple lights.
+```
 
+**Options:**
+- `entity`: The entity ID of the light.
+- `icon`: Icon to display (default: `mdi:lightbulb`).
+- `font_size`: Font size of the text (default: `20px`).
+- `name`: Custom label for the button (default: entity’s friendly name).
+
+### 2. Lights Slider Card
+
+**Purpose:** Adjust brightness for multiple lights.
+
+**Configuration:**
+```yaml
 type: custom:light-control-slider
 entities:
   - light.light1
   - light.light2
 label: "Living Room Lights"
 font_size: 14px
+font_style: normal
 line_color: "#e9c344"
 line_width: 2px
 icon: mdi:lightbulb
-Options:
-entities: List of light entities.
-label: Card label.
-font_size, line_color, line_width: Styling options.
-icon: Icon to display.
-3. Main Entrance Card
-Purpose: Display temperature and humidity.
+```
 
+**Options:**
+- `entities`: List of light entities.
+- `label`: Display label for the card.
+- `font_size`, `font_style`: Adjust font styling.
+- `line_color`, `line_width`: Customize slider appearance.
+- `icon`: Icon to display.
+
+### 3. Main Entrance Card
+
+**Purpose:** Display temperature and humidity data in the entrance.
+
+**Configuration:**
+```yaml
 type: custom:main-entrance-card
 temperature: sensor.temperature_sensor
 humidity: sensor.humidity_sensor
@@ -93,68 +120,61 @@ background_color: "#f5f5f5"
 font_size: 14px
 padding: 20px
 height: 80px
-Options:
-temperature, humidity: Sensor entities.
-background_color, font_size, padding, height: Styling options.
-4. Rail Card
-Purpose: Display live train schedules using the National Rail Integration.
+```
 
+**Options:**
+- `temperature`, `humidity`: Sensor entities to display.
+- `background_color`: Card’s background color.
+- `font_size`, `padding`, `height`: Styling options.
+
+### 4. Rail Card
+
+**Purpose:** Display live train schedules using the [National Rail Integration](https://github.com/jfparis/homeassistant_nationalrail).
+
+**Configuration:**
+```yaml
 type: custom:train-schedule-card
 entity: sensor.train_departures
 title: "Train Schedule"
 icon: mdi:train
 update_interval: 60000
-Options:
-entity: Train schedule sensor.
-title: Card title (default: "Train Schedule").
-icon: Icon to display.
-update_interval: Refresh interval in ms (default: 60000).
-5. Ruler Card (Degrees)
-Purpose: Adjustable slider for temperature or other values.
+```
 
+**Options:**
+- `entity`: The sensor created by the National Rail integration that provides train departure information (e.g., `sensor.train_departures`).
+- `title`: Title for the card (default: "Train Schedule").
+- `icon`: Icon to display (default: `mdi:train`).
+- `update_interval`: Refresh interval in milliseconds (default: `60000`).
+
+### 5. Ruler Card (Degrees)
+
+**Purpose:** Adjustable slider for temperature or other values.
+
+**Configuration:**
+```yaml
 type: custom:ruler-card
 min: 0
 max: 100
 step: 5
 font_size: 14px
-Options:
-min, max, step: Slider range and step values.
-font_size: Font size.
-6. Ruler Card (Percentage)
-Purpose: Slider for percentage-based values.
+```
 
+**Options:**
+- `min`, `max`, `step`: Slider range and step values.
+- `font_size`: Font size of labels.
+
+### 6. Ruler Card (Percentage)
+
+**Purpose:** Display percentage-based values with a slider.
+
+**Configuration:**
+```yaml
 type: custom:ruler-card-percentage
 min: 0
 max: 100
 step: 10
 font_size: 14px
-Options:
-min, max, step: Percentage range and step.
-font_size: Font size.
-7. Temperature Slider Card
-Purpose: Adjust thermostat temperature.
+```
 
-type: custom:temperature-room-slider
-entity: climate.thermostat
-min: 15
-max: 30
-font_size: 14px
-icon: mdi:thermometer
-line_color: "#ad1d1d"
-line_width: 2px
-Options:
-entity: Thermostat entity.
-min, max: Temperature range.
-font_size, icon, line_color, line_width: Styling options.
-8. Welcome Entrance Card
-Purpose: Display weather and welcome information (e.g., with the AccuWeather integration).
-
-type: custom:weather-info-card
-weather: weather.your_location
-background_color: "#ffffff"
-font_size: 14px
-padding: 20px
-height: 80px
-Options:
-weather: Weather entity.
-background_color, font_size, padding, height: Styling options.
+**Options:**
+- `min`, `max`, `step`: 
