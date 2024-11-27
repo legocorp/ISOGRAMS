@@ -9,19 +9,20 @@ I’ve been a Home Assistant enthusiast for a while, and after equipping my flat
 The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, using the **Kiosk Browser** app for a seamless experience. While it works in portrait mode, the layout may occasionally appear misaligned.  
 
 ### Features
-- **Custom Sidebar:** Based on a modified version of [DBuit’s Sidebar Card](https://github.com/DBuit/sidebar-card). *(Not included as I haven’t obtained permission to share the modifications.)*
+- **Custom Sidebar:** Based on a modified version of [DBuit’s Sidebar Card](https://github.com/DBuit/sidebar-card). *(Not included as I haven’t asked permission to share the modifications.)*
 - **Two Themes:** A light and dark theme to complement the dashboard.
 - **Eight Custom Cards:** Fully configurable and designed for intuitive interaction.
 
----
-
-## Screenshots
 
 ### ISOGRAMS Light Theme
 ![ISOGRAMS Light Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-light.png)
 
 ### ISOGRAMS Dark Theme
  ![ISOGRAMS Dark Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-dark.png)
+
+
+### Download link:
+https://github.com/legocorp/ISOGRAMS/blob/main/ISOGRAMS.zip
 
 
 ## Custom Cards
