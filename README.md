@@ -60,8 +60,8 @@ The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, u
 
 ## Custom Cards
 
-![1. Light Control Button](https://github.com/legocorp/ISOGRAMS/blob/main/img/1_Light_Control_Button.png)
 ### 1. Light Control Button
+![1. Light Control Button](https://github.com/legocorp/ISOGRAMS/blob/main/img/1_Light_Control_Button.png)
 **Purpose:** Quickly toggle a light entity on/off. On hold, access settings.
 
 ```yaml
@@ -81,6 +81,7 @@ name: "Living Room Light"
 ---
 
 ### 2. Lights Slider Card
+![2. Lights Slider Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/2_Lights_Slider_Card.png)
 **Purpose:** Adjust brightness for multiple lights.
 
 ```yaml
@@ -104,6 +105,7 @@ icon: mdi:lightbulb
 ---
 
 ### 3. Main Entrance Card
+![3. Main Entrance Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/3_Main_Entrance_Card.png)
 **Purpose:** Display temperature and humidity.
 
 ```yaml
@@ -123,6 +125,7 @@ height: 80px
 ---
 
 ### 4. Rail Card
+![4. Rail Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/4_Rail_Card.png)
 **Purpose:** Display live train schedules using the [National Rail Integration](https://github.com/jfparis/homeassistant_nationalrail).
 
 ```yaml
@@ -142,6 +145,7 @@ update_interval: 60000
 ---
 
 ### 5. Ruler Card (Degrees)
+![5. Ruler Card (Degrees)](https://github.com/legocorp/ISOGRAMS/blob/main/img/5_Ruler_Card_Degrees.png)
 **Purpose:** Adjustable slider for temperature or other values.
 
 ```yaml
@@ -159,6 +163,7 @@ font_size: 14px
 ---
 
 ### 6. Ruler Card (Percentage)
+![6. Ruler Card (Percentage)](https://github.com/legocorp/ISOGRAMS/blob/main/img/6_Ruler_Card_Percentage.png)
 **Purpose:** Slider for percentage-based values.
 
 ```yaml
@@ -176,6 +181,7 @@ font_size: 14px
 ---
 
 ### 7. Temperature Slider Card
+![7. Temperature Slider Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/7_Temperature_Slider_Card.png)
 **Purpose:** Adjust thermostat temperature.
 
 ```yaml
@@ -197,6 +203,7 @@ line_width: 2px
 ---
 
 ### 8. Welcome Entrance Card
+![8. Welcome Entrance Card](https://github.com/legocorp/ISOGRAMS/blob/main/img/8_Welcome_Entrance_Card.png)
 **Purpose:** Display weather and welcome information (e.g., with the AccuWeather integration).
 
 ```yaml
@@ -213,13 +220,3 @@ height: 80px
   - `background_color`, `font_size`, `padding`, `height`: Styling options.
 
 ---
-
-## Future Plans
-
-If there's enough interest, I might explore integrating this dashboard into HACS for easier sharing and installation. Any feedback or contributions are welcome!
-
----
-
-```
-
-Copy and paste the content above into a file named `README.md` and use it for your GitHub repository. Let me know if you need further assistance!
