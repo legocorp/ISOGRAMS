@@ -24,12 +24,10 @@ I’ve also built two themes (kind of work in progress just like everything but 
 Two themes accompany the dashboard:
 
 - **ISOGRAMS - Light**
-  ![ISOGRAMS Light Theme](path_to_light_theme_screenshot.png)
+  ![ISOGRAMS Light Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-light.png?raw=true)
 
 - **ISOGRAMS - Dark**
-  ![ISOGRAMS Dark Theme](path_to_dark_theme_screenshot.png)
-
-*Screenshots are placeholders; please replace `path_to_light_theme_screenshot.png` and `path_to_dark_theme_screenshot.png` with actual image paths.*
+  ![ISOGRAMS Dark Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-dark.png?raw=true)
 
 ## Components
 
@@ -160,4 +158,43 @@ font_size: 14px
 ```
 
 **Options:**
-- `min`, `max`, `step`: 
+- `min`, `max`, `step`:
+
+
+### 7. Temperature Slider Card
+**Purpose:** Adjust thermostat temperature.
+
+```yaml
+type: custom:temperature-room-slider
+entity: climate.thermostat
+min: 15
+max: 30
+font_size: 14px
+icon: mdi:thermometer
+line_color: "#ad1d1d"
+line_width: 2px
+```
+
+- **Options:**
+  - `entity`: Thermostat entity.
+  - `min`, `max`: Temperature range.
+  - `font_size`, `icon`, `line_color`, `line_width`: Styling options.
+
+
+### 8. Welcome Entrance Card
+**Purpose:** Display weather and welcome information (e.g., with the AccuWeather integration).
+
+```yaml
+type: custom:weather-info-card
+weather: weather.your_location
+background_color: "#ffffff"
+font_size: 14px
+padding: 20px
+height: 80px
+```
+
+- **Options:**
+  - `weather`: Weather entity.
+  - `background_color`, `font_size`, `padding`, `height`: Styling options.
+
+---
