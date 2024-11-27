@@ -1,12 +1,23 @@
-# ISOGRAMS - Custom Dashboard and Buttons
+# ISOGRAMS
 
 Welcome to ISOGRAMS, a custom dashboard interface for Home Assistant designed to be simple, intuitive, and free from information overload.
 
 ## Overview
 
-After equipping my flat with smart technology, I developed this dashboard to streamline control and monitoring. It's optimized for landscape mode on a Lenovo Tab M8 with a dock station, utilizing the Kiosk app for continuous operation. While it functions in portrait mode, the layout may appear differently.
+Hello everyone,
 
-**Note:** The sidebar is a modified version of the [sidebar card by DBuit](https://github.com/DBuit/sidebar-card). Due to permission considerations, this modified sidebar isn't included in this repository.
+I’ve been using home assistant for a while, I love it and I’m incredibly grateful for it’s development.
+
+Now that I’ve bought a flat and have it fully equiped with tech I’ve decided to build a dashboard interface. This is what I’m sharing in the hopes that people might use and perhaps improve it!
+
+It’s currently running a Lenovo tab m8 with a dock station and have the kiosk app to keep everything going.
+It’s designed to be run in landscape mode, it also works in portrait but sometimes it looks funny.
+
+The idea for this dashboard is to keep it simple, easy to understand and avoid an overload of information.
+
+Side note: I’m using a modified version of the sidebar card developed by DBuit GitHub - DBuit/sidebar-card 1, since I haven’t asked him permission to share it, I won’t do it.
+
+I’ve also built two themes (kind of work in progress just like everything but usuable for now)
 
 ## Themes
 
