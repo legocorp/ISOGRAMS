@@ -1,8 +1,8 @@
 {
     "name": "ISOGRAMS",
-    "content_in_root": true,
+    "content_in_root": false,
     "country": ["US", "GB"],
-    "domains": ["Dashboard"],
+    "domains": ["lovelace"],
     "homeassistant": "2024.10.3",
     "render_readme": true
   }
