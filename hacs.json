@@ -1,41 +1,42 @@
 {
-    "name": "ISOGRAMS",
+    "name": "ISOGRAMS Suite",
     "content_in_root": false,
     "render_readme": true,
     "domains": ["lovelace"],
     "country": ["global"],
     "resources": [
       {
-        "url": "lovelace-isograms/light-control-button.js",
+        "url": "/hacsfiles/lovelace-isograms/light-control-button.js",
         "type": "module"
       },
       {
-        "url": "lovelace-isograms/lights-slider-card.js",
+        "url": "/hacsfiles/lovelace-isograms/lights-slider-card.js",
         "type": "module"
       },
       {
-        "url": "lovelace-isograms/main-entrance-card.js",
+        "url": "/hacsfiles/lovelace-isograms/main-entrance-card.js",
         "type": "module"
       },
       {
-        "url": "lovelace-isograms/rail-card.js",
+        "url": "/hacsfiles/lovelace-isograms/rail-card.js",
         "type": "module"
       },
       {
-        "url": "lovelace-isograms/ruler-card-degrees.js",
+        "url": "/hacsfiles/lovelace-isograms/ruler-card-degrees.js",
         "type": "module"
       },
       {
-        "url": "lovelace-isograms/ruler-card-percentage.js",
+        "url": "/hacsfiles/lovelace-isograms/ruler-card-percentage.js",
         "type": "module"
       },
       {
-        "url": "lovelace-isograms/temperature-slider-card.js",
+        "url": "/hacsfiles/lovelace-isograms/temperature-slider-card.js",
         "type": "module"
       },
       {
-        "url": "lovelace-isograms/welcome-entrance-card.js",
+        "url": "/hacsfiles/lovelace-isograms/welcome-entrance-card.js",
         "type": "module"
       }
     ]
   }
+  
