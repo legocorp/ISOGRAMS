@@ -1,6 +1,41 @@
 {
     "name": "ISOGRAMS Suite",
-    "filename": "isograms-suite.js",
-    "homeassistant": "2021.1.5",
-    "render_readme": true
-}
+    "content_in_root": false,
+    "render_readme": true,
+    "domains": ["lovelace"],
+    "country": ["global"],
+    "resources": [
+      {
+        "url": "/hacsfiles/lovelace-isograms/light-control-button.js",
+        "type": "module"
+      },
+      {
+        "url": "/hacsfiles/lovelace-isograms/lights-slider-card.js",
+        "type": "module"
+      },
+      {
+        "url": "/hacsfiles/lovelace-isograms/main-entrance-card.js",
+        "type": "module"
+      },
+      {
+        "url": "/hacsfiles/lovelace-isograms/rail-card.js",
+        "type": "module"
+      },
+      {
+        "url": "/hacsfiles/lovelace-isograms/ruler-card-degrees.js",
+        "type": "module"
+      },
+      {
+        "url": "/hacsfiles/lovelace-isograms/ruler-card-percentage.js",
+        "type": "module"
+      },
+      {
+        "url": "/hacsfiles/lovelace-isograms/temperature-slider-card.js",
+        "type": "module"
+      },
+      {
+        "url": "/hacsfiles/lovelace-isograms/welcome-entrance-card.js",
+        "type": "module"
+      }
+    ]
+  }
