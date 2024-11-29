@@ -1,3 +1,10 @@
+
+/**
+ * @license
+ * Home Assistant Community Store
+ * @hacs
+ */
+
 class LightControlButton extends HTMLElement {
     constructor() {
         super();
@@ -160,4 +167,6 @@ window.customCards.push({
     type: 'light-control-button',
     name: 'ISOGRAMS - Light Control Button',
     description: 'A customizable button card for controlling lights with tap to toggle and hold to open popup.',
+});
+ustomizable button card for controlling lights with tap to toggle and hold to open popup.',
 });

@@ -1,3 +1,10 @@
+
+/**
+ * @license
+ * Home Assistant Community Store
+ * @hacs
+ */
+
 class TrainScheduleCard extends HTMLElement {
     setConfig(config) {
         if (!config.entity) {
@@ -180,6 +187,11 @@ class TrainScheduleCard extends HTMLElement {
 
     static getStubConfig() {
         return { entity: "sensor.train_schedule" };
+    }
+}
+
+customElements.define("train-schedule-card", TrainScheduleCard);
+turn { entity: "sensor.train_schedule" };
     }
 }
 

@@ -1,3 +1,10 @@
+
+/**
+ * @license
+ * Home Assistant Community Store
+ * @hacs
+ */
+
 class LightControlSlider extends HTMLElement {
     set hass(hass) {
         const label = this.config.label;
@@ -210,6 +217,10 @@ customElements.define('light-control-slider', LightControlSlider);
 window.customCards = window.customCards || [];
 window.customCards.push({
     type: 'light-control-slider',
+    name: 'ISOGRAMS - Light Control Slider',
+    description: 'A slider card for controlling light brightness with centered text and icon.',
+});
+
     name: 'ISOGRAMS - Light Control Slider',
     description: 'A slider card for controlling light brightness with centered text and icon.',
 });

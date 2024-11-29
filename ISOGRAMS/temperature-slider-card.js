@@ -1,3 +1,10 @@
+
+/**
+ * @license
+ * Home Assistant Community Store
+ * @hacs
+ */
+
 class TemperatureRoomSlider extends HTMLElement {
     set hass(hass) {
         this._hass = hass;
@@ -207,6 +214,9 @@ customElements.define('temperature-room-slider', TemperatureRoomSlider);
 window.customCards = window.customCards || [];
 window.customCards.push({
     type: 'temperature-room-slider',
+    name: 'ISOGRAMS - Temperature Room Slider',
+    description: 'A slider card for setting room temperature with centered text and icon.',
+});
     name: 'ISOGRAMS - Temperature Room Slider',
     description: 'A slider card for setting room temperature with centered text and icon.',
 });

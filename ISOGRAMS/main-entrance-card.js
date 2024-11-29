@@ -1,3 +1,10 @@
+
+/**
+ * @license
+ * Home Assistant Community Store
+ * @hacs
+ */
+
 class MainEntranceCard extends HTMLElement {
     constructor() {
         super();

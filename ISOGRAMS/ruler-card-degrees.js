@@ -1,3 +1,10 @@
+
+/**
+ * @license
+ * Home Assistant Community Store
+ * @hacs
+ */
+
 class RulerCard extends HTMLElement {
     constructor() {
         super();
@@ -116,5 +123,8 @@ window.customCards.push({
     name: 'ISOGRAMS - Ruler Card degrees',
     preview: true, // Optional - defaults to false
     description: 'A custom card to display a ruler with customizable ticks and labels.',
+});
+
+ a ruler with customizable ticks and labels.',
 });
 
