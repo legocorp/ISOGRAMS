@@ -1,5 +1,6 @@
 {
     "name": "ISOGRAMS Suite",
+    "filename": "isograms-suite.js",
     "render_readme": true,
     "content_in_root": true,
     "zip_release": false,
