@@ -1,6 +1,12 @@
 
+/**
+ * Bundled ISOGRAMS Suite
+ * All cards are included in this file.
+ */
 
-// light-control-button.js
+
+// ------------------ light-control-button.js ------------------
+(function() {
 
 /**
  * @license
@@ -174,8 +180,10 @@ window.customCards.push({
 ustomizable button card for controlling lights with tap to toggle and hold to open popup.',
 });
 
+})();
 
-// lights-slider-card.js
+// ------------------ lights-slider-card.js ------------------
+(function() {
 
 /**
  * @license
@@ -403,8 +411,10 @@ window.customCards.push({
     description: 'A slider card for controlling light brightness with centered text and icon.',
 });
 
+})();
 
-// main-entrance-card.js
+// ------------------ main-entrance-card.js ------------------
+(function() {
 
 /**
  * @license
@@ -504,8 +514,10 @@ window.customCards.push({
     description: 'A card to display temperature and humidity for the main entrance.',
 });
 
+})();
 
-// rail-card.js
+// ------------------ rail-card.js ------------------
+(function() {
 
 /**
  * @license
@@ -705,8 +717,10 @@ turn { entity: "sensor.train_schedule" };
 
 customElements.define("train-schedule-card", TrainScheduleCard);
 
+})();
 
-// ruler-card-degrees.js
+// ------------------ ruler-card-degrees.js ------------------
+(function() {
 
 /**
  * @license
@@ -838,8 +852,10 @@ window.customCards.push({
 });
 
 
+})();
 
-// ruler-card-percentage.js
+// ------------------ ruler-card-percentage.js ------------------
+(function() {
 
 /**
  * @license
@@ -961,8 +977,10 @@ window.customCards.push({
 e ticks, steps, and hidden max label.',
 });
 
+})();
 
-// temperature-slider-card.js
+// ------------------ temperature-slider-card.js ------------------
+(function() {
 
 /**
  * @license
@@ -1186,8 +1204,10 @@ window.customCards.push({
     description: 'A slider card for setting room temperature with centered text and icon.',
 });
 
+})();
 
-// welcome-entrance-card.js
+// ------------------ welcome-entrance-card.js ------------------
+(function() {
 
 /**
  * @license
@@ -1289,3 +1309,5 @@ window.customCards.push({
     name: 'ISOGRAMS - Weather Info Card',
     description: 'A card to display the current weather description and temperature.',
 });
+
+})();
