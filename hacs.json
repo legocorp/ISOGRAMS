@@ -1,8 +1,7 @@
 {
     "name": "ISOGRAMS Suite",
-    "filename": "cards/isograms-suite.js",
     "render_readme": true,
-    "content_in_root": false,
+    "content_in_root": true,
     "zip_release": false,
     "homeassistant": "2021.1.5"
 }
