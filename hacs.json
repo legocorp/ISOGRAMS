@@ -4,7 +4,7 @@
   "domains": ["isograms"],
   "country": [],
   "zip_release": false,
-  "filename": "cards",
+  "filename": "cards/",
   "render_readme": true,
   "homeassistant": "2021.1.5",
   "persistent_directory": "cards",
