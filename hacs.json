@@ -6,35 +6,35 @@
     "country": ["global"],
     "resources": [
       {
-        "url": "/community/lovelace-isograms/light-control-button.js",
+        "url": "lovelace-isograms/light-control-button.js",
         "type": "module"
       },
       {
-        "url": "/community/lovelace-isograms/lights-slider-card.js",
+        "url": "lovelace-isograms/lights-slider-card.js",
         "type": "module"
       },
       {
-        "url": "/community/lovelace-isograms/main-entrance-card.js",
+        "url": "lovelace-isograms/main-entrance-card.js",
         "type": "module"
       },
       {
-        "url": "/community/lovelace-isograms/rail-card.js",
+        "url": "lovelace-isograms/rail-card.js",
         "type": "module"
       },
       {
-        "url": "/community/lovelace-isograms/ruler-card-degrees.js",
+        "url": "lovelace-isograms/ruler-card-degrees.js",
         "type": "module"
       },
       {
-        "url": "/community/lovelace-isograms/ruler-card-percentage.js",
+        "url": "lovelace-isograms/ruler-card-percentage.js",
         "type": "module"
       },
       {
-        "url": "/community/lovelace-isograms/temperature-slider-card.js",
+        "url": "lovelace-isograms/temperature-slider-card.js",
         "type": "module"
       },
       {
-        "url": "/community/lovelace-isograms/welcome-entrance-card.js",
+        "url": "lovelace-isograms/welcome-entrance-card.js",
         "type": "module"
       }
     ]
