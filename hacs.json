@@ -6,35 +6,35 @@
     "country": ["global"],
     "resources": [
       {
-        "url": "/hacsfiles/lovelace-isograms/light-control-button.js",
+        "url": "cards/light-control-button.js",
         "type": "module"
       },
       {
-        "url": "/hacsfiles/lovelace-isograms/lights-slider-card.js",
+        "url": "cards/lights-slider-card.js",
         "type": "module"
       },
       {
-        "url": "/hacsfiles/lovelace-isograms/main-entrance-card.js",
+        "url": "cards/main-entrance-card.js",
         "type": "module"
       },
       {
-        "url": "/hacsfiles/lovelace-isograms/rail-card.js",
+        "url": "cards/rail-card.js",
         "type": "module"
       },
       {
-        "url": "/hacsfiles/lovelace-isograms/ruler-card-degrees.js",
+        "url": "cards/ruler-card-degrees.js",
         "type": "module"
       },
       {
-        "url": "/hacsfiles/lovelace-isograms/ruler-card-percentage.js",
+        "url": "cards/ruler-card-percentage.js",
         "type": "module"
       },
       {
-        "url": "/hacsfiles/lovelace-isograms/temperature-slider-card.js",
+        "url": "cards/temperature-slider-card.js",
         "type": "module"
       },
       {
-        "url": "/hacsfiles/lovelace-isograms/welcome-entrance-card.js",
+        "url": "cards/welcome-entrance-card.js",
         "type": "module"
       }
     ]

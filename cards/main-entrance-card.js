@@ -1,19 +1,12 @@
-
-/**
- * @license
- * Home Assistant Community Store
- * @hacs
- */
-
-class WeatherInfoCard extends HTMLElement {
+class MainEntranceCard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
 
     setConfig(config) {
-        if (!config.weather || !config.background_color) {
-            throw new Error("You need to define a weather entity and background_color.");
+        if (!config.temperature || !config.humidity || !config.background_color) {
+            throw new Error("You need to define temperature, humidity entities, and background_color.");
         }
 
         this.config = {
@@ -28,11 +21,8 @@ class WeatherInfoCard extends HTMLElement {
     set hass(hass) {
         this._hass = hass;
 
-        const weatherState = hass.states[this.config.weather]?.state || 'N/A';
-        const temperature = hass.states[this.config.weather]?.attributes.temperature || 'N/A';
-
-        // Capitalize the first letter of the weather state
-        const weatherDescription = weatherState.charAt(0).toUpperCase() + weatherState.slice(1);
+        const temperature = hass.states[this.config.temperature]?.state || 'N/A';
+        const humidity = hass.states[this.config.humidity]?.state || 'N/A';
 
         this.shadowRoot.innerHTML = `
             <style>
@@ -57,7 +47,7 @@ class WeatherInfoCard extends HTMLElement {
                     margin-bottom: 10px;
                 }
 
-                .description, .temperature {
+                .temperature, .humidity {
                     padding: 0 10px;
                     font-weight: bold;
                     cursor: pointer;
@@ -65,17 +55,17 @@ class WeatherInfoCard extends HTMLElement {
             </style>
             <ha-card>
                 <div class="content">
-                    <div class="description" id="description">${weatherDescription}</div>
+                    <div class="humidity" id="humidity">${humidity}%</div>
                     <div class="temperature" id="temperature">${temperature}°C</div>
                 </div>
             </ha-card>
         `;
 
-        const descriptionElement = this.shadowRoot.getElementById('description');
-        descriptionElement.addEventListener('click', () => this._showMoreInfo(this.config.weather));
-
         const temperatureElement = this.shadowRoot.getElementById('temperature');
-        temperatureElement.addEventListener('click', () => this._showMoreInfo(this.config.weather));
+        temperatureElement.addEventListener('click', () => this._showMoreInfo(this.config.temperature));
+
+        const humidityElement = this.shadowRoot.getElementById('humidity');
+        humidityElement.addEventListener('click', () => this._showMoreInfo(this.config.humidity));
     }
 
     _showMoreInfo(entityId) {
@@ -90,12 +80,12 @@ class WeatherInfoCard extends HTMLElement {
 }
 
 // Define the custom element
-customElements.define('weather-info-card', WeatherInfoCard);
+customElements.define('main-entrance-card', MainEntranceCard);
 
 // Add the card to the card picker
 window.customCards = window.customCards || [];
 window.customCards.push({
-    type: 'weather-info-card',
-    name: 'ISOGRAMS - Weather Info Card',
-    description: 'A card to display the current weather description and temperature.',
+    type: 'main-entrance-card',
+    name: 'ISOGRAMS - Main Entrance Card',
+    description: 'A card to display temperature and humidity for the main entrance.',
 });

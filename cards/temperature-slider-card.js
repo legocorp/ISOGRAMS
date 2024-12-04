@@ -1,23 +1,15 @@
-
-/**
- * @license
- * Home Assistant Community Store
- * @hacs
- */
-
-class LightControlSlider extends HTMLElement {
+class TemperatureRoomSlider extends HTMLElement {
     set hass(hass) {
-        const label = this.config.label;
-        const entities = this.config.entities;
-
-        const lightEntities = entities
-            ? entities
-            : Object.keys(hass.states).filter((entityId) =>
-                  entityId.startsWith('light.') &&
-                  hass.states[entityId].attributes.friendly_name.includes(label)
-              );
+        this._hass = hass;
 
         if (!this.card) {
+            const entityId = this.config.entity;
+            const stateObj = this._hass.states[entityId];
+
+            if (!stateObj) {
+                throw new Error(`Entity ${entityId} not found.`);
+            }
+
             this.card = document.createElement('ha-card');
             this.card.style.position = 'relative';
             this.card.style.display = 'flex';
@@ -38,28 +30,17 @@ class LightControlSlider extends HTMLElement {
             // Slider input
             this.slider = document.createElement('input');
             this.slider.type = 'range';
-            this.slider.min = 0;
-            this.slider.max = 255;
-            this.slider.step = 1;
-
-            const initialBrightness = lightEntities.length
-                ? Math.round(
-                      lightEntities.reduce(
-                          (sum, entityId) =>
-                              sum + (hass.states[entityId].attributes.brightness || 0),
-                          0
-                      ) / lightEntities.length
-                  )
-                : 0;
-            this.slider.value = initialBrightness;
-
+            this.slider.min = this.config.min || 15;
+            this.slider.max = this.config.max || 30;
+            this.slider.step = 0.1;
+            this.slider.value = stateObj.attributes.temperature || stateObj.state;
             this.slider.style.width = '100%';
             this.slider.style.height = '100%';
             this.slider.style.appearance = 'none';
             this.slider.style.position = 'absolute';
             this.slider.style.margin = '0';
             this.slider.style.padding = '0';
-            this.slider.style.background = 'linear-gradient(to right, transparent 0%, transparent 0%)';
+            this.slider.style.background = 'transparent';
 
             const styleSheet = document.createElement('style');
             this.updateLineStyle(styleSheet);
@@ -67,16 +48,14 @@ class LightControlSlider extends HTMLElement {
 
             this.slider.addEventListener('input', (e) => {
                 this.updateSliderFill();
-                this.valueDisplay.innerText = `${e.target.value}`;
+                this.valueDisplay.innerText = `${parseFloat(e.target.value).toFixed(1)}°`;
             });
 
             this.slider.addEventListener('change', (e) => {
-                const brightness = parseInt(e.target.value, 10);
-                lightEntities.forEach((entityId) => {
-                    hass.callService('light', 'turn_on', {
-                        entity_id: entityId,
-                        brightness: brightness,
-                    });
+                const value = parseFloat(e.target.value).toFixed(1);
+                this._hass.callService('climate', 'set_temperature', {
+                    entity_id: entityId,
+                    temperature: value,
                 });
             });
 
@@ -88,29 +67,38 @@ class LightControlSlider extends HTMLElement {
 
             this.textContainer = document.createElement('div');
             this.textContainer.style.position = 'absolute';
-            this.textContainer.style.zIndex = '3'; // Ensure text is above everything
-            this.textContainer.style.top = '50%'; // Align to the center
+            this.textContainer.style.top = '50%'; // Center vertically
             this.textContainer.style.left = '10px';
             this.textContainer.style.right = '10px';
-            this.textContainer.style.transform = 'translateY(-50%)'; // Adjust for perfect vertical centering
+            this.textContainer.style.transform = 'translateY(-50%)'; // Adjust for perfect centering
             this.textContainer.style.display = 'flex';
             this.textContainer.style.justifyContent = 'space-between';
             this.textContainer.style.alignItems = 'center';
+            this.textContainer.style.zIndex = '3'; // Ensure text is above everything
             this.textContainer.style.color = 'var(--primary-text-color)';
+            this.textContainer.style.fontSize = fontSize;
+            this.textContainer.style.fontStyle = fontStyle;
             this.textContainer.style.pointerEvents = 'none'; // Allow slider interaction underneath
 
             const iconElement = document.createElement('ha-icon');
-            iconElement.icon = this.config.icon || 'mdi:lightbulb';
+            iconElement.icon = this.config.icon || 'mdi:thermometer';
             iconElement.style.marginLeft = '15px';
             iconElement.style.marginRight = '10px';
             iconElement.style.color = 'var(--primary-text-color)';
             iconElement.style.fontSize = fontSize;
 
             this.label = document.createElement('span');
-            this.label.innerText = this.config.name || (entities ? 'Selected Lights' : `All ${label} Lights`);
-            this.label.style.fontSize = fontSize;
+            this.label.innerText = this.config.name || stateObj.attributes.friendly_name;
             this.label.style.fontWeight = fontStyle === 'bold' ? 'bold' : 'normal';
             this.label.style.color = 'var(--primary-text-color)';
+
+            this.valueDisplay = document.createElement('span');
+            this.valueDisplay.innerText = `${parseFloat(
+                stateObj.attributes.temperature || stateObj.state
+            ).toFixed(1)}°`;
+            this.valueDisplay.style.marginRight = '10px';
+            this.valueDisplay.style.fontWeight = fontStyle === 'bold' ? 'bold' : 'normal';
+            this.valueDisplay.style.color = 'var(--primary-text-color)';
 
             const titleContainer = document.createElement('div');
             titleContainer.style.display = 'flex';
@@ -119,6 +107,8 @@ class LightControlSlider extends HTMLElement {
             titleContainer.appendChild(this.label);
 
             this.textContainer.appendChild(titleContainer);
+            this.textContainer.appendChild(this.valueDisplay);
+
             container.appendChild(this.textContainer);
             this.card.appendChild(container);
             this.appendChild(this.card);
@@ -137,7 +127,7 @@ class LightControlSlider extends HTMLElement {
         const max = parseFloat(this.slider.max);
 
         const percentage = ((value - min) / (max - min)) * 100;
-        const fillColor = this.config.line_color || '#e9c344';
+        const fillColor = this.config.line_color || '#ad1d1d';
 
         this.slider.style.background = `linear-gradient(to right, ${fillColor} ${percentage}%, var(--card-background-color) ${percentage}%)`;
     }
@@ -146,7 +136,7 @@ class LightControlSlider extends HTMLElement {
      * Dynamically update the line style for the slider thumb.
      */
     updateLineStyle(styleSheet) {
-        const lineColor = this.config.line_color || '#e9c344';
+        const lineColor = this.config.line_color || '#ad1d1d';
         const thumbWidth = this.config.line_width || '2px';
 
         styleSheet.innerText = `
@@ -195,8 +185,8 @@ class LightControlSlider extends HTMLElement {
     }
 
     setConfig(config) {
-        if (!config.label && !config.entities) {
-            throw new Error('Please define either a label or a list of entities.');
+        if (!config.entity) {
+            throw new Error('Please define an entity.');
         }
         this.config = config;
 
@@ -211,16 +201,12 @@ class LightControlSlider extends HTMLElement {
     }
 }
 
-customElements.define('light-control-slider', LightControlSlider);
+customElements.define('temperature-room-slider', TemperatureRoomSlider);
 
 // Add the card to the card picker
 window.customCards = window.customCards || [];
 window.customCards.push({
-    type: 'light-control-slider',
-    name: 'ISOGRAMS - Light Control Slider',
-    description: 'A slider card for controlling light brightness with centered text and icon.',
-});
-
-    name: 'ISOGRAMS - Light Control Slider',
-    description: 'A slider card for controlling light brightness with centered text and icon.',
+    type: 'temperature-room-slider',
+    name: 'ISOGRAMS - Temperature Room Slider',
+    description: 'A slider card for setting room temperature with centered text and icon.',
 });

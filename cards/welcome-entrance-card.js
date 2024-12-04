@@ -1,10 +1,3 @@
-
-/**
- * @license
- * Home Assistant Community Store
- * @hacs
- */
-
 class WeatherInfoCard extends HTMLElement {
     constructor() {
         super();

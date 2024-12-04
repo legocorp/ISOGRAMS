@@ -1,10 +1,3 @@
-
-/**
- * @license
- * Home Assistant Community Store
- * @hacs
- */
-
 class RulerCardPercentage extends HTMLElement {
     constructor() {
         super();
@@ -115,6 +108,4 @@ window.customCards.push({
     name: 'ISOGRAMS - Ruler Card Percentage',
     preview: true,
     description: 'A custom card to display a ruler with percentage values (0-100), customizable ticks, steps, and hidden max label.',
-});
-e ticks, steps, and hidden max label.',
 });
