@@ -1,39 +1,11 @@
 {
   "name": "ISOGRAMS Suite",
-  "content_in_root": false,
+  "content_in_root": true,
   "render_readme": true,
-  "filename": "cards/light-control-button.js",
+  "filename": "ISOGRAMS-bundle.js",
   "resources": [
     {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/light-control-button.js",
-      "type": "module"
-    },
-    {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/lights-slider-card.js",
-      "type": "module"
-    },
-    {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/main-entrance-card.js",
-      "type": "module"
-    },
-    {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/rail-card.js",
-      "type": "module"
-    },
-    {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/ruler-card-degrees.js",
-      "type": "module"
-    },
-    {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/ruler-card-percentage.js",
-      "type": "module"
-    },
-    {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/temperature-slider-card.js",
-      "type": "module"
-    },
-    {
-      "url": "/hacsfiles/ISOGRAMS-suite/cards/welcome-entrance-card.js",
+      "url": "/hacsfiles/ISOGRAMS-suite/ISOGRAMS-bundle.js",
       "type": "module"
     }
   ],
