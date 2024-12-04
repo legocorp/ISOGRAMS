@@ -30,7 +30,7 @@ Enter the repository URL:
 ```yaml
 https://github.com/legocorp/ISOGRAMS
 ```
-Choose the Frontend category.
+Choose the Dashboard category.
 Click Add.
 Search for ISOGRAMS Suite in the HACS frontend section and install it.
 
