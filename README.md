@@ -23,7 +23,6 @@ The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, u
 ### Installation
 To install the ISOGRAMS Suite, follow these steps:
 
-1. Add the Repository to HACS
 Open the HACS interface in Home Assistant.
 Click on the three dots in the top-right corner.
 Select Custom Repositories.
