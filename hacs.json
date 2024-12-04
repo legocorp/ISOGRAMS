@@ -1,42 +1,45 @@
 {
-    "name": "ISOGRAMS Suite",
-    "content_in_root": false,
-    "render_readme": true,
-    "domains": ["lovelace"],
-    "country": ["global"],
-    "resources": [
-      {
-        "url": "cards/light-control-button.js",
-        "type": "module"
-      },
-      {
-        "url": "cards/lights-slider-card.js",
-        "type": "module"
-      },
-      {
-        "url": "cards/main-entrance-card.js",
-        "type": "module"
-      },
-      {
-        "url": "cards/rail-card.js",
-        "type": "module"
-      },
-      {
-        "url": "cards/ruler-card-degrees.js",
-        "type": "module"
-      },
-      {
-        "url": "cards/ruler-card-percentage.js",
-        "type": "module"
-      },
-      {
-        "url": "cards/temperature-slider-card.js",
-        "type": "module"
-      },
-      {
-        "url": "cards/welcome-entrance-card.js",
-        "type": "module"
-      }
-    ]
-  }
-  
+  "name": "ISOGRAMS Suite",
+  "content_in_root": false,
+  "render_readme": true,
+  "filename": "cards/light-control-button.js",
+  "resources": [
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/light-control-button.js",
+      "type": "module"
+    },
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/lights-slider-card.js",
+      "type": "module"
+    },
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/main-entrance-card.js",
+      "type": "module"
+    },
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/rail-card.js",
+      "type": "module"
+    },
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/ruler-card-degrees.js",
+      "type": "module"
+    },
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/ruler-card-percentage.js",
+      "type": "module"
+    },
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/temperature-slider-card.js",
+      "type": "module"
+    },
+    {
+      "url": "/hacsfiles/ISOGRAMS-suite/cards/welcome-entrance-card.js",
+      "type": "module"
+    }
+  ],
+  "domains": ["lovelace"],
+  "iot_class": "local_push",
+  "country": ["global"],
+  "codeowners": ["@legocorp"],
+  "version": "1.0.0"
+}
