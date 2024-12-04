@@ -20,9 +20,20 @@ The dashboard is designed to run on a **Lenovo Tab M8** in **landscape mode**, u
 ### ISOGRAMS Dark Theme
  ![ISOGRAMS Dark Theme](https://github.com/legocorp/ISOGRAMS/blob/main/img/ISOGRAMS-dark.png)
 
+### Installation
+To install the ISOGRAMS Suite, follow these steps:
 
-### Download link:
-https://github.com/legocorp/ISOGRAMS/blob/main/ISOGRAMS.zip
+1. Add the Repository to HACS
+Open the HACS interface in Home Assistant.
+Click on the three dots in the top-right corner.
+Select Custom Repositories.
+Enter the repository URL:
+```yaml
+https://github.com/legocorp/ISOGRAMS
+```
+Choose the Frontend category.
+Click Add.
+Search for ISOGRAMS Suite in the HACS frontend section and install it.
 
 
 ## Custom Cards
