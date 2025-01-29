@@ -1,0 +1,78 @@
+ISOGRAMS-DARK:
+  #font
+  primary-font-family: "Inter"
+  paper-font-common-base_-_font-family: "var(--primary-font-family)"
+  paper-font-common-code_-_font-family: "var(--primary-font-family)"
+  paper-font-body1_-_font-family: "var(--primary-font-family)"
+  paper-font-subhead_-_font-family: "var(--primary-font-family)"
+  paper-font-headline_-_font-family: "var(--primary-font-family)"
+  paper-font-caption_-_font-family: "var(--primary-font-family)"
+  paper-font-title_-_font-family: "var(--primary-font-family)"
+  ha-card-header-font-family: "var(--primary-font-family)"
+
+  ##border thickness
+  ha-card-border-width: "1px"
+  ha-card-border-color: "#252525"
+  ha-card-border-color-button: "#575757"
+
+  ##card radius
+  ha-card-border-radius: "5px"
+
+  ### Primary Colors
+  primary-color: "#ED8008" # Blue highlight for primary elements
+  light-primary-color: "#3c94e3" # Slightly lighter blue
+  dark-primary-color: "#1a7ccc" # Darker blue for accent
+
+  ### Background and Sidebar
+  primary-background-color: "#000" # Dark background for main content
+  secondary-background-color: "#2a2a2a" # Slightly lighter for secondary areas
+  card-background-color: "#161616" # Card background color
+  sidebar-background-color: "#181818" # Sidebar background color
+
+  ### Text and Icon Colors
+  primary-text-color: "#ffffff" # White for primary text
+  secondary-text-color: "#b3b3b3" # Light gray for secondary text
+  text-primary-color: "#ffffff" # White for primary elements
+  disabled-text-color: "#666666" # Darker gray for disabled text
+  icon-color: "#1e90ff" # Blue for icons
+
+  ### Card and Element Styling
+  card-border-radius: "2px" # Rounded corners for cards
+  # card-shadow: "0px 2px 6px rgba(0, 0, 0, 0.2)" # Soft shadow on cards
+  divider-color: "#444444" # Divider color between elements
+
+  ### State Colors
+  state-icon-color-on: "#ff6347" # Coral for active state icons
+  state-icon-color-off: "#777777" # Gray for inactive state icons
+
+  ### Header Bar and Navigation
+  app-header-background-color: "#222222" # Dark header bar
+  app-header-text-color: "#ffffff" # White text on header
+
+  ### Button Styling
+  button-card-background-color: "#1e90ff" # Blue for buttons
+  button-card-text-color: "#ffffff" # White button text
+
+  ### Toggle and Switch Colors
+  switch-unchecked-button-color: "#555555" # Gray for unchecked switches
+  switch-checked-color: "#1e90ff" # Blue for checked switches
+  switch-unchecked-track-color: "#444444" # Track color for unchecked switches
+
+  ### Custom Sidebar (for Sidebar Card)
+  sidebar-selected-background-color: "#1e90ff" # Background for selected sidebar item
+  sidebar-selected-icon-color: "#ffffff" # White for selected icon
+  sidebar-text-color: "#b3b3b3" # Gray sidebar text
+  sidebar-selected-text-color: "#ffffff" # White for selected text
+
+  ### Graph Colors
+  graph-line-color: "#1e90ff" # Line color for graphs
+  graph-fill-color: "rgba(30, 144, 255, 0.2)" # Fill color for graph areas
+
+  ### Miscellaneous
+  label-badge-background-color: "#2a2a2a" # Badge background color
+  label-badge-text-color: "#ffffff" # Badge text color
+  slider-color: "#1e90ff" # Blue for sliders
+  accent-color: "#6d6d6d" # Accent color for any remaining highlights
+
+  ## Code editor:
+  code-editor-background-color: "#111111"
